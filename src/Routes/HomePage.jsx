@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { Container,Row,Col } from 'react-bootstrap'
+import Header from '../Components/Header'
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <Container fluid>
+        <Row>
+        <Header/>
+        </Row>
+    </Container>
   )
 }
 
