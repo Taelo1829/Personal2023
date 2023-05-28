@@ -1,10 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
-const Body = ({ count }) => {
+const Body = () => {
     const description = ["SOFTWARE DEVELOPER"]
-    const [selected, setSelected] = useState(description[0])
-  
+    const [selected, setSelected] = useState("")
+    let i = 0
+    useEffect(() => {
+        renderDescription()
+    }, [selected])
+    
+    const renderDescription = () => {
+        if(selected.length < description[i].length){
+            setTimeout(()=>{
+                setSelected(selected + description[i][selected.length])
+            },1000)
+        }
+    }
+
     return (
         <Container className='my-5 text-center'>
             <Row>
