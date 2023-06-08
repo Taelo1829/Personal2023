@@ -1,12 +1,13 @@
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
 }
 
-body {
+body,
+.container-body {
   background: linear-gradient(to bottom, #100265, #000000);
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
 }
 
 .button {
@@ -23,6 +24,16 @@ body {
   width: 170px;
 }
 
+.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-body {
+  position: relative;
+}
+
 .description {
   font-size: 30px;
   font-weight: 100;
@@ -36,10 +47,47 @@ body {
   color: #660489
 }
 
+.fa-times {
+  cursor: pointer;
+}
+
+.form {
+  border: 2px solid#984eb3;
+  border-radius: 25px;
+  background-color: #0f02658a;
+  position: relative;
+}
+
+.form-page {
+  background-color: rgba(0, 0, 0, 0.582);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
 .heading {
   font-size: 40px;
   color: #fff;
   font-weight: 800;
+}
+
+input,
+input:active,
+input:focus,
+input:not(:focus),
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #984eb3;
+  color: white;
+  outline: none;
+  padding: 0px;
+  text-transform: capitalize;
 }
 
 .sub1 {
@@ -59,4 +107,10 @@ body {
   color: #04019E;
   -webkit-text-stroke: 2px #660489;
   -webkit-text-fill-color: #04019E
+}
+
+textarea {
+  height: 75px;
+  border: 2px solid #984eb3;
+  border-radius: 10px
 }
